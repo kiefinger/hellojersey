@@ -1,0 +1,20 @@
+version: '3'
+services:
+  hellojersey:
+    image: hellojersey:latest
+    ports:
+      - 18080:8080
+    networks:
+      - webnet
+  web:
+    image: helloclient:latest
+    ports:
+      - 18085:8085
+    environment:
+      - JERSEY_URL=http://hellojersey:8080/myapp/
+    networks:
+      - webnet
+    depends_on:
+      - hellojersey
+networks:
+  webnet:

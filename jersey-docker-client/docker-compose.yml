@@ -1,0 +1,16 @@
+version: '3'
+services:
+  hellojersey:
+    image: hellojersey:latest
+    ports:
+      - '18080:8080'
+    networks:
+      - webnet
+  web:
+    build: .
+    ports:
+      - '18085:8085'
+    networks:
+      - webnet
+networks:
+  webnet:

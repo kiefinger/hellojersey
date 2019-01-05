@@ -1,0 +1,3 @@
+
+mvn archetype:generate -DarchetypeArtifactId=jersey-quickstart-grizzly2 -DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false -DgroupId=com.dekexx -DartifactId=jersey-docker-client -Dpackage=com.dekses.jersey.docker.demo -DarchetypeVersion=2.22.2
+
